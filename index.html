@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Nattuuu 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: Georgia, serif;
+  color: #803767;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #fff0fa 0%, transparent 50%),
+    linear-gradient(135deg, #fbc2eb, #d9c2ff, #ffd6e7);
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 30px 23px;
+  border: 1px solid #ffffffc9;
+  border-radius: 28px;
+  background: #fff8fbdc;
+  box-shadow: 0 15px 50px #9b478b25;
+  animation: appear .7s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hidden { display: none !important; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.eyebrow {
+  color: #bf579b;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #e34498;
+  font-size: clamp(29px, 7vw, 39px);
+  font-style: italic;
+  line-height: 1.25;
+}
+
+p { line-height: 1.8; }
+
+button {
+  border: none;
+  border-radius: 40px;
+  padding: 13px 24px;
+  margin: 8px 4px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px #d65b9a30;
+}
+
+.yes, .continue {
+  color: white;
+  background: linear-gradient(135deg, #ff4c9b, #d94db6);
+  box-shadow: 0 5px 12px #e84b982b;
+}
+
+.no {
+  color: #bb4f8c;
+  background: white;
+  border: 1px solid #f5d3e8;
+}
+
+.cat {
+  font-size: 82px;
+  margin: 14px 0;
+  animation: bounce 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  to { transform: translateY(-9px) rotate(3deg); }
+}
+
+.letter {
+  text-align: left;
+  padding: 15px;
+  background: #fffaf4;
+  border-radius: 15px;
+  border: 1px dashed #efafd0;
+  line-height: 1.9;
+}
+
+.heart {
+  position: fixed;
+  top: -30px;
+  z-index: 1;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(35deg); opacity: .2; }
+}
+
+.signature {
+  color: #d94696;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.small { font-size: 12px; color: #a36b91; }
+
+</style>
+</head>
+
+<body>
+
+<!-- FIRST SCREEN -->
+<section class="card" id="first">
+  <p class="eyebrow">♡ A little question for you ♡</p>
+  <div style="font-size:32px">🎀 💗 🎀</div>
+
+  <h1>Will you be mine, Nattuuu? 💖</h1>
+
+  <p>
+    My favourite girl,<br>
+    you make my ordinary days feel special.
+    If I could choose someone all over again,
+    I would still choose you. 🥹💕
+  </p>
+
+  <p>So, Nattuuu... will you be mine? 🌷</p>
+
+  <button class="no" id="no" onclick="runAway()">
+    No 🙈
+  </button>
+
+  <button class="yes" onclick="showScreen('second')">
+    YESSS 💗
+  </button>
+
+  <p class="small">Made with love by your Aduu ♡</p>
+</section>
+
+<!-- YES SCREEN -->
+<section class="card hidden" id="second">
+  <p class="eyebrow">♡ My heart is yours ♡</p>
+
+  <h1>YAYYY! I LOVE YOU 💕</h1>
+
+  <div class="cat">😽💗</div>
+
+  <p>
+    Nattuuu, you're not just my favourite girl.
+    You're my happiness, my comfort, and
+    my favourite person to annoy forever. 🧸
+  </p>
+
+  <p class="signature">You + Me = Always ♡</p>
+
+  <button class="continue" onclick="showScreen('third')">
+    Open your letter 💌
+  </button>
+</section>
+
+<!-- LOVE LETTER -->
+<section class="card hidden" id="third">
+  <p class="eyebrow">♡ Something from my heart ♡</p>
+
+  <h1>To My Nattuuu 💌</h1>
+
+  <div class="letter">
+    My dearest Nattuuu, 💗
+
+    <p>
+      I don't know if I can put everything I feel
+      into words, but I want you to know how special
+      you are to me.
+    </p>
+
+    <p>
+      Your smile, your silly little moments, and
+      the way you make me happy mean more to me
+      than you know.
+    </p>
+
+    <p>
+      I don't promise that every day will be perfect.
+      I promise to keep learning, understanding you,
+      and making beautiful memories with you.
+    </p>
+
+    <p>
+      If I get to choose again and again,
+      my answer will always be you. 🥹💗
+    </p>
+
+    <p class="signature">
+      Lots of love,<br>
+      Your Aduu ♡
+    </p>
+  </div>
+
+  <div class="cat">💐🧸💖</div>
+
+  <button class="continue" onclick="showScreen('fourth')">
+    One last thing... 💗
+  </button>
+</section>
+
+<!-- FINAL SCREEN -->
+<section class="card hidden" id="fourth">
+  <p class="eyebrow">♡ Just us ♡</p>
+
+  <div class="cat">🐱💕🐱</div>
+
+  <h1>Forever & Always</h1>
+
+  <p>
+    Nattuuu & Aduu<br>
+    Two silly hearts, one beautiful story. 🌷
+  </p>
+
+  <p>
+    No matter how many pages this little website
+    has, my favourite part will always be us. 💞
+  </p>
+
+  <h2 style="color:#df4799">I love you, Nattuuu! 💗</h2>
+
+  <button class="continue" onclick="showScreen('first')">
+    Read it all again ↻
+  </button>
+
+  <p class="small">Made just for you, with love ♡</p>
+</section>
+
+<script>
+function showScreen(id) {
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.add("hidden");
+  });
+
+  document.getElementById(id).classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+
+function runAway() {
+  const btn = document.getElementById("no");
+  const maxX = Math.max(0, window.innerWidth - btn.offsetWidth - 20);
+  const maxY = Math.max(0, window.innerHeight - btn.offsetHeight - 20);
+
+  btn.style.position = "fixed";
+  btn.style.left = Math.random() * maxX + "px";
+  btn.style.top = Math.random() * maxY + "px";
+  btn.style.zIndex = "5";
+}
+
+setInterval(() => {
+  const heart = document.createElement("span");
+  heart.className = "heart";
+  heart.textContent = ["💗", "💕", "💖", "♡", "🌸", "✨"][
+    Math.floor(Math.random() * 6)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 16) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 8000);
+}, 500);
+</script>
+
+</body>
+</html>
